@@ -2,18 +2,22 @@ const todos = [
 {
     id: 1,
     task: 'Read Bible',
-    isCompleted: true
+    isCompleted: true,
+    priority: 'urgent'
 
 },
 {
     id: 2,
     task: 'Cook Food',
-    isCompleted: true
+    isCompleted: true,
+    priority: 'neutral'
+
 },
 {
     id: 3,
     task: 'Take a bath',
-    isCompleted: false
+    isCompleted: false,
+    priority: 'neutral'
 }
 ];
 
@@ -30,7 +34,7 @@ console.log(todoTasks);
 
 //Filter and return an array of filted objects
 const todoCompleted = todos.filter(function(todo){
-    return todo.isCompleted === true;
+    return todo.isCompleted === true && todo.priority === 'urgent';
 }).map(function(todo){
     return todo.task;
 });

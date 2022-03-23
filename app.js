@@ -67,5 +67,7 @@ class Person {
 
 // Instantiating an object
 const person1 = new Person('Joe', 'Balingit', '05-15-1984');
+const person2 = new Person('Zen', 'Balingit', '12-15-1985');
 
 console.log(`${person1.getFullName()} was born on ${person1.getBirthYear()}` );
+console.log(`${person2.getFullName()} was born on ${person2.getBirthYear()}` );

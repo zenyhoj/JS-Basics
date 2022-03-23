@@ -21,6 +21,8 @@ const todos = [
 }
 ];
 
+/*Accessing Array of Objects using Higher Order Functions*/ 
+
 //Foreach
 todos.forEach(function(todo){
     console.log(todo.task);
@@ -40,3 +42,30 @@ const todoCompleted = todos.filter(function(todo){
 });
 console.log(todoCompleted);
 
+
+/*OOP*/
+
+//Creating the Object Person
+class Person {
+    constructor(firstName, lastName, dob) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+
+    }
+
+    // creating a method
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return this.firstName + ' ' + this.lastName;
+    }
+} 
+
+// Instantiating an object
+const person1 = new Person('Joe', 'Balingit', '05-15-1984');
+
+console.log(`${person1.getFullName()} was born on ${person1.getBirthYear()}` );
